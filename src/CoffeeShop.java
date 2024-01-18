@@ -1,18 +1,18 @@
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
+import java.util.ArrayList;
 
 public class CoffeeShop {
-    private static final BlockingQueue<String> ingredientBuffer = new LinkedBlockingQueue<>();
+    private static final ArrayList<String> ingredientBuffer = new ArrayList<>();
+    static Box box = new Box();
 
-    public static void main (String [] args) throws InterruptedException {
-
+    public static void main(String[] args) throws InterruptedException {
         System.out.println("PROGRAM STARTING...");
 
+        for (int iteration = 0; iteration < 20; iteration++) {
 
+            Barista baristaCoffeeBeans = new Barista("COFFEEBEANS");
+            Barista baristaSugar = new Barista("SUGAR");
+            Barista baristaWater = new Barista("WATER");
 
-        for (int iteration = 0; iteration < 5; iteration++) {
-
-            ingredientBuffer.clear();
 
 
             Agent agent = new Agent();
@@ -20,37 +20,32 @@ public class CoffeeShop {
             agent.start();
             agent.join();
 
-            for (String item : agent.getIngredient()) {
-                ingredientBuffer.add(item);
-            }
+            box.put(agent.getIngredients());
+            System.out.println("Agent placed " + agent.getIngredients() + " on the counter");
 
-            System.out.println("--------------------------AGENT HAS FINISHED PRODUCING----------------------------");
-            System.out.println("Placing items on counter...");
+            ArrayList<String> boxIngredient = (ArrayList<String>) box.get();
+
+            System.out.println("Barista's retrieving ingredients...");
+
+            baristaCoffeeBeans.add(boxIngredient);
+            baristaWater.add(boxIngredient);
+            baristaSugar.add(boxIngredient);
 
 
-            Barista baristaCofeeBeans = new Barista("COFFEEBEANS", ingredientBuffer);
-            Barista baristaSugar = new Barista("SUGAR", ingredientBuffer);
-            Barista baristaWater = new Barista("WATER", ingredientBuffer);
-
-            baristaCofeeBeans.setName("baristaCoffeeBeans");
-            baristaCofeeBeans.start();
+            baristaCoffeeBeans.setName("baristaCoffeeBeans");
+            baristaCoffeeBeans.start();
             baristaSugar.setName("baristaSugar");
             baristaSugar.start();
             baristaWater.setName("baristaWater");
             baristaWater.start();
 
-            baristaCofeeBeans.join();
+            // Optionally wait for the Barista threads to finish before moving to the next iteration
+            baristaCoffeeBeans.join();
             baristaSugar.join();
             baristaWater.join();
 
-            System.out.println("--------------------------BARISTA'S HAVE FINISHED----------------------------");
+            System.out.println("--------------------------BARISTAS HAVE FINISHED----------------------------");
             System.out.println("***************************************************************************************************");
-
         }
     }
-
-
-
-
-
-    }
+}

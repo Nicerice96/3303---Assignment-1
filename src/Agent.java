@@ -42,7 +42,7 @@ public class Agent extends Thread{
 
     }
 
-    public ArrayList<String> getIngredient(){
+    public ArrayList<String> getIngredients(){
         return agentProducedIngredients;
 
     }
