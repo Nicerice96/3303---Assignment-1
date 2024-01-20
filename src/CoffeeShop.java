@@ -1,8 +1,22 @@
 import java.util.ArrayList;
 
+/**
+ * Class that simulates the CoffeeShop; acts as the main class
+ *
+ * @author Zarif
+ * @version 1.0 beta
+ */
+
 public class CoffeeShop {
-    private static final ArrayList<String> ingredientBuffer = new ArrayList<>();
     static Box box = new Box();
+
+
+    /**
+     * Begin's the simulated CoffeeShop environment
+     *
+     * @param args
+     * @throws InterruptedException
+     */
 
     public static void main(String[] args) throws InterruptedException {
         System.out.println("PROGRAM STARTING...");
@@ -12,7 +26,6 @@ public class CoffeeShop {
             Barista baristaCoffeeBeans = new Barista("COFFEEBEANS");
             Barista baristaSugar = new Barista("SUGAR");
             Barista baristaWater = new Barista("WATER");
-
 
 
             Agent agent = new Agent();
@@ -39,7 +52,6 @@ public class CoffeeShop {
             baristaWater.setName("baristaWater");
             baristaWater.start();
 
-            // Optionally wait for the Barista threads to finish before moving to the next iteration
             baristaCoffeeBeans.join();
             baristaSugar.join();
             baristaWater.join();

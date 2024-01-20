@@ -1,45 +1,74 @@
 import java.util.ArrayList;
 
+/**
+ * A class to represent an individual barista
+ *
+ * @author Zarif
+ * @Version 1.0 beta
+ */
+
 public class Barista extends Thread {
 
     private String baristaIngredient;
 
-    private ArrayList<String> totalIngredients = new ArrayList<>();
+    private ArrayList<String> inventory = new ArrayList<>();
 
+    /**
+     * Barista Constructor; sets default Barista ingredient
+     *
+     * @param baristaIngredient
+     */
     Barista(String baristaIngredient) {
         this.baristaIngredient = baristaIngredient;
-        totalIngredients.add(baristaIngredient);
+        inventory.add(baristaIngredient);
     }
 
+    /**
+     * An enum to represent the required elements needed to brew a Coffee
+     */
     public enum MandatoryIngredients {
         WATER, SUGAR, COFFEEBEANS
     }
 
+    /**
+     * Allow for the addition of an ingredient into the current Barista's inventory
+     *
+     * @param ingredient
+     */
     public synchronized void add(ArrayList<String> ingredient) {
-        if (totalIngredients.size() <= 3) {
-            totalIngredients.addAll(ingredient);
+        if (inventory.size() <= 3) {
+            inventory.addAll(ingredient);
         } else {
-            totalIngredients.clear();
-            totalIngredients.add(baristaIngredient);
+            inventory.clear();
+            inventory.add(baristaIngredient);
         }
     }
 
+    /**
+     * Determines whether all ingredients needed to brew a coffee are within the current barista's inventory or not
+     *
+     * @return boolean
+     */
+
     public synchronized boolean brewCoffee() {
-        if (!totalIngredients.contains(baristaIngredient)) {
+        if (!inventory.contains(baristaIngredient)) {
             System.out.println(Thread.currentThread() + " is waiting for " + baristaIngredient);
             return false;
         }
 
         for (MandatoryIngredients item : MandatoryIngredients.values()) {
-            if (!totalIngredients.contains(item.name())) {
-                System.out.println("NOT ALL ITEMS FOUND: " + totalIngredients + " MISSING: " + item);
+            if (!inventory.contains(item.name())) {
+                System.out.println("NOT ALL ITEMS FOUND: " + inventory + " MISSING: " + item);
                 return false;
             }
         }
-        System.out.println("ALL ITEMS FOUND!: " + totalIngredients + "SUCCESS");
+        System.out.println("ALL ITEMS FOUND!: " + inventory);
         return true;
     }
 
+    /**
+     * runs the current barista thread and determines whether the current thread was able to brew a coffee or not
+     */
     @Override
     public void run() {
         try {
@@ -50,7 +79,7 @@ public class Barista extends Thread {
 
         synchronized (this) {
             if (brewCoffee()) {
-                System.out.println(Thread.currentThread().getName() + " SUCCESS :: " + Thread.currentThread().getName() +" BREWED A COFFEE!!!");
+                System.out.println(Thread.currentThread().getName() + " SUCCESS :: " + Thread.currentThread().getName() + " BREWED A COFFEE!!!");
                 try {
                     Thread.sleep(2000);
                 } catch (Exception e) {
