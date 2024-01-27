@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * A class to represent an individual barista
  *
  * @author Zarif
- * @Version 1.0 beta
+ * @version 1.0 beta
  */
 
 public class Barista extends Thread {

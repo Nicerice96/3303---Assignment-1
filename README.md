@@ -1,4 +1,4 @@
-# Assignment 1
+Assignment 1
 -------------------------------------------------------------------
 ## Development Team 
 - __Zarif Khan__ : _101224172_
@@ -13,7 +13,9 @@ to produce a coffee. The program repeats this process for 20 iterations.
 - Once running, check the terminal, the output should be displayed
 - _Enjoy!_
 
-### Milestone
+---------------------------------------------------
+
+
 _Copyright (c) 2024 [Zarif Khan]_
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

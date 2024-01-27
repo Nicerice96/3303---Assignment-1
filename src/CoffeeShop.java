@@ -44,7 +44,6 @@ public class CoffeeShop {
             baristaWater.add(boxIngredient);
             baristaSugar.add(boxIngredient);
 
-
             baristaCoffeeBeans.setName("baristaCoffeeBeans");
             baristaCoffeeBeans.start();
             baristaSugar.setName("baristaSugar");
