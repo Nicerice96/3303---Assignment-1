@@ -12,32 +12,25 @@ to produce a coffee in their local inventory. If a given barista can complete a 
 - Run the "Coffee Shop" clas
 - Once running, check the terminal, the output should be displayed
 - _Enjoy!_
-
+### Concepts Used:
 * Multi-Threading
-* Java Threads
+* Java Threads 
 * Synchronization
 * Implementation of the "Box" method of "shared" data
 * Concurrent Threads
-
-### Program Architecture
+----------------------------------------------------------------
+### Program Architecture:
+#### UML Diagram:
 - Below is a UML diagram describing the project as a whole
-
 ![Assignment1UML](https://github.com/Nicerice96/3303---Assignment-1/assets/100174834/96874b49-d179-4bd4-903b-e354fc8b1b03)
 
-[Assignment1UML.pdf](..%2F..%2F..%2F..%2F..%2F..%2FDownloads%2FAssignment1UML.pdf)
-
-
-### Sequence Diagram 
+#### Sequence Diagram: 
 - Below is a Sequence diagram describing a typical execution of the project
+![Sequence Diagram.drawio.png](..%2FDiagrams%2FSequence%20Diagram.drawio.png)
+##### Download the pdfs!
+- [Assignment1UML.pdf](..%2F..%2F..%2F..%2F..%2F..%2FDownloads%2FAssignment1UML.pdf)
 - [Sequence Diagram.drawio.pdf](..%2FDiagrams%2FSequence%20Diagram.drawio.pdf)
-
-
-
-
-
 ---------------------------------------------------------------------
-
-
 _Copyright (c) 2024 [Zarif Khan]_
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
