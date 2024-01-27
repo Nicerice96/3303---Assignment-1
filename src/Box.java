@@ -17,9 +17,6 @@ public class Box {
      * otherwise, the Box contents are not changed.
      *
      * @param ingredients the object that is to be stored in this Box.
-     * @return true if obj was stored in this Box; false if another object
-     *          was already stored in the Box (in which case, this Box was not
-     *          changed by invoking this method).
      */
     public synchronized void put(ArrayList<String> ingredients) {
         // Wait for the Box to be empty; ie it's full, therefore we cannot produce
