@@ -5,7 +5,7 @@ import java.util.Random;
  * Agent acts as the "supplier" and generates ingredients for the baristas to use
  *
  * @author Zarif
- * @version 1.0 beta
+ * @version 2.0
  */
 
 

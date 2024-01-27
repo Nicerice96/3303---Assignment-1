@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/**
+ * A Class that acts as a universal dropBox, where the Agent and Barista's can either put, or take things from it
+ * @author Zarif (modifed)
+ * @version 2.0
+ */
 public class Box {
 
     /**

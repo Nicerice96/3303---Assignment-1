@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * Class that simulates the CoffeeShop; acts as the main class
  *
  * @author Zarif
- * @version 1.0 beta
+ * @version 2.0
  */
 
 public class CoffeeShop {
