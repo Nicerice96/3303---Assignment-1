@@ -20,9 +20,16 @@ to produce a coffee in their local inventory. If a given barista can complete a 
 * Concurrent Threads
 
 ### Program Architecture
+- Below is a UML diagram describing the project as a whole
 
 ![Assignment1UML](https://github.com/Nicerice96/3303---Assignment-1/assets/100174834/96874b49-d179-4bd4-903b-e354fc8b1b03)
 
+[Assignment1UML.pdf](..%2F..%2F..%2F..%2F..%2F..%2FDownloads%2FAssignment1UML.pdf)
+
+
+### Sequence Diagram 
+- Below is a Sequence diagram describing a typical execution of the project
+- [Sequence Diagram.drawio.pdf](..%2FDiagrams%2FSequence%20Diagram.drawio.pdf)
 
 
 
