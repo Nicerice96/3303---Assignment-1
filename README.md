@@ -9,11 +9,11 @@ after which barista's can take said ingredients and brew coffee's. Each barista 
 to produce a coffee. The program repeats this process for 20 iterations.
 
 ### How to run:
-- Run the "Coffee Shop" class
+- Run the "Coffee Shop" class; this Class acts as the main thread
 - Once running, check the terminal, the output should be displayed
 - _Enjoy!_
 
----------------------------------------------------
+---------------------------------------------------------------------
 
 
 _Copyright (c) 2024 [Zarif Khan]_
