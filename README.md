@@ -1,17 +1,32 @@
-Assignment 1
+The Coffee Brewmasters Challenge
 -------------------------------------------------------------------
-## Development Team 
+## Development Team
 - __Zarif Khan__ : _101224172_
 -------------------------------------------------------------------
 ### Description:
-This program simulates a working coffee shop where one "agent" produces ingredients determined by the user,
-after which barista's can take said ingredients and brew coffee's. Each barista posses one of the ingredients needed
-to produce a coffee. The program repeats this process for 20 iterations.
+This program simulates a working coffee shop where one "agent" thread produces ingredients determined by the user,
+after which barista's can take the aforementioned ingredients and brew coffee's. Each barista contains one of the ingredients needed
+to produce a coffee in their local inventory. If a given barista can complete a "set" of ingredients, that is to say, they pick up and place one of each item in their inventory, then that barista is now capable of producing a coffee. 
 
 ### How to run:
 - Run the "Coffee Shop" class; this Class acts as the main thread
 - Once running, check the terminal, the output should be displayed
 - _Enjoy!_
+
+* Multi-Threading
+* Java Threads
+* Synchronization
+* Implementation of the "Box" method of "shared" data
+* Concurrent Threads
+
+### Program Architecture
+
+![Assignment1UML](https://github.com/Nicerice96/3303---Assignment-1/assets/100174834/96874b49-d179-4bd4-903b-e354fc8b1b03)
+
+
+
+
+
 
 ---------------------------------------------------------------------
 
