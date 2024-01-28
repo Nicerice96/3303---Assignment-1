@@ -9,9 +9,10 @@ after which barista's can take the aforementioned ingredients and brew coffee's.
 to produce a coffee in their local inventory. If a given barista can complete a "set" of ingredients, that is to say, they pick up and place one of each item in their inventory, then that barista is now capable of producing a coffee. 
 
 ### How to run:
-- Run the "Coffee Shop" clas
+- Run the "Coffee Shop" class
 - Once running, check the terminal, the output should be displayed
 - _Enjoy!_
+
 ### Concepts Used:
 * Multi-Threading
 * Java Threads 
@@ -26,7 +27,7 @@ to produce a coffee in their local inventory. If a given barista can complete a 
 
 #### Sequence Diagram: 
 - Below is a Sequence diagram describing a typical execution of the project
-![Sequence Diagram.drawio.png](..%2FDiagrams%2FSequence%20Diagram.drawio.png)
+![Sequence Diagram.drawio.png](..%2FDiagrams%2FPNG%20of%20Diagrams%2FSequence%20Diagram.drawio.png)
 ##### Download the pdfs!
 - [Assignment1UML.pdf](..%2F..%2F..%2F..%2F..%2F..%2FDownloads%2FAssignment1UML.pdf)
 - [Sequence Diagram.drawio.pdf](..%2FDiagrams%2FSequence%20Diagram.drawio.pdf)
